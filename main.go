@@ -4,20 +4,16 @@ import "fmt"
 
 func main() {
 
-	// hitung rata2
-	// scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
-	// hasil harus beserta komanya
-	scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
+	// Basic Function
+	// 1. Parameter/Input
+	// 2. Proses
+	// 3. Output
+	sentence := printMyResult("saya sedang")
+	fmt.Println(sentence)
 
-	var total int
-	for _, score := range(scores) {
-		total = total + score
-	}
+}
 
-	length := len(scores)
-	average := float64(total) / float64(length)
-
-	fmt.Println(average)
-
-
+func printMyResult(sentence string) string {
+	newSentence := sentence + " belajar golang"
+	return newSentence
 }
