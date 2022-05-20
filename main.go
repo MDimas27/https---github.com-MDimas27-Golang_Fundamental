@@ -18,6 +18,4 @@ func main() {
 	average := float64(total) / float64(length)
 
 	fmt.Println(average)
-
-
 }
