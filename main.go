@@ -4,26 +4,19 @@ import "fmt"
 
 func main() {
 
-	title := "Golang the best language"
-	fmt.Println("============= MENAMPILKAN ELEMEN DENGAN INDEX GENAP =============")
-	for index, letter := range title {
-		if index%2 == 0 {
-			fmt.Println("index : ", index, "letter : ", string(letter))
-		}
+	// hitung rata2
+	// scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
+	scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
+
+	var total int
+	for _, score := range(scores) {
+		total = total + score
 	}
 
-	fmt.Println("============= MENAMPILKAN ELEMEN DENGAN HURUF VOCAL SAJA =============")
-	for index, letter := range title {
-		letterString := string(letter)
-		if letterString == "a" || letterString == "i" || letterString == "u" || letterString == "e" || letterString == "o" {
-			fmt.Println("index : ", index, "letter : ", string(letter))
-		}
+	length := len(scores)
+	average := total / length
 
-		switch letterString {
-		case "a", "i", "u", "e", "o":
-			fmt.Println("index : ", index, "letter : ", string(letter))
-	}
-	}
+	fmt.Println(average)
 
 
 }
