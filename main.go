@@ -4,20 +4,18 @@ import "fmt"
 
 func main() {
 
-	// hitung rata2
+	// Tentukan goodScores dengan nilai >= 90
 	// scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
 	// hasil harus beserta komanya
 	scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
 
-	var total int
-	for _, score := range(scores) {
-		total = total + score
+	var goodScores []int
+
+	for _, score := range (scores) {
+		if score >= 90 {
+			goodScores = append(goodScores, score)
+		}
 	}
-
-	length := len(scores)
-	average := float64(total) / float64(length)
-
-	fmt.Println(average)
-
-
+	
+	fmt.Println(goodScores)
 }
