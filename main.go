@@ -3,21 +3,23 @@ package main
 import "fmt"
 
 func main() {
+	// scores := []int {10, 5, 8, 9, 7}
+	// total := sum(scores)
+	scores := []int {10, 5, 8, 9, 7}
+	
+	total := sum(scores)
+	fmt.Println(total)
 
-	// hitung rata2
-	// scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
-	// hasil harus beserta komanya
-	scores := [8]int{100, 80, 75, 92, 70, 93, 88, 67}
+}
+
+func sum(numbers []int) int{
 
 	var total int
-	for _, score := range(scores) {
-		total = total + score
+	for _, number := range numbers {
+		total = total + number
 	}
 
-	length := len(scores)
-	average := float64(total) / float64(length)
-
-	fmt.Println(average)
+	return total
 
 
 }
